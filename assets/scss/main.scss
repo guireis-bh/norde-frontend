@@ -1,0 +1,92 @@
+/* Custom Style */
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
+body {
+  background-color: #eae8ec;
+  color: #828080;
+}
+
+label {
+  color: #828080;
+  display: inline;
+}
+
+.navbar-nav.right {
+  right: 1em;
+  position: absolute;
+}
+
+.bg-norde-menu {
+  background-color: #3b6d7b !important;
+}
+
+.card {
+  padding-bottom: 2%;
+
+  &.big-top {
+    margin-top: 6% !important;
+  }
+
+  h1 {
+    padding: 0.2em;
+    color: #828080;
+    font-size: 1.8em;
+    border-bottom: solid #eaeaff 0.05em;
+    text-align: center;
+  }
+
+  h2 {
+    padding: 0.2em;
+    text-align: left;
+    color: #828080;
+    font-size: 1.4em;
+    border-bottom: solid #eaeaff 0.05em;
+  }
+
+  .row {
+    padding: 0.5em;
+
+    input, .input {
+      width: 100%
+    }
+
+    .vue-tags-input {
+      @extend .form-control;
+      width: 100% !important;
+      max-width: none;
+      padding: 0;
+      height: auto;
+      .ti-input {
+        border: none;
+      }
+    }
+
+    select {
+      width: 100%;
+    }
+
+    .vueditor {
+      width: 100%
+    }
+  }
+}
+section {
+  &.content {
+    margin: 0.8em;
+    margin-right: 0;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  section.content {
+    margin-left: 0;
+  }
+
+  .navbar-nav.right {
+    right: 0;
+    position: inherit;
+  }
+}
